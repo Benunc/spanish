@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Spanish Flashcards</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="category-selector">
+            <select id="categorySelect">
+                <option value="all">All Categories</option>
+                <option value="classroom">Classroom Commands</option>
+                <option value="greetings">Greetings & Farewells</option>
+                <option value="questions">Common Questions</option>
+                <option value="days">Days of the Week</option>
+                <option value="months">Months</option>
+                <option value="numbers">Numbers</option>
+                <option value="pronouns">Pronouns</option>
+                <option value="seasons">Seasons</option>
+                <option value="time">Time Expressions</option>
+                <option value="weather">Weather Expressions</option>
+            </select>
+        </div>
+
+        <div class="flashcard-container">
+            <div class="flashcard">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <p id="spanishWord">Loading...</p>
+                    </div>
+                    <div class="card-back">
+                        <p id="englishWord">Loading...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button id="checkAnswer">Check Answer</button>
+            <div class="navigation">
+                <button id="prevCard">←</button>
+                <span id="cardCounter">1/1</span>
+                <button id="nextCard">→</button>
+            </div>
+        </div>
+    </div>
+    <script src="vocabulary.js"></script>
+    <script src="app.js"></script>
+</body>
+</html> 
