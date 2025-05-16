@@ -11,15 +11,18 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    width: 100vw;
+    overflow-x: hidden;
 }
 
 .container {
-    max-width: 100%;
-    padding: 16px;
-    margin: 0 auto;
+    width: 100vw;
+    max-width: 100vw;
+    padding: 0;
+    margin: 0;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 1vh;
     height: 100vh;
     max-height: 100vh;
     overflow: hidden;
@@ -27,13 +30,13 @@ body {
 
 .category-selector {
     width: 100%;
-    padding: 8px;
+    padding: 1vh;
 }
 
 select {
     width: 100%;
-    padding: 12px;
-    font-size: 16px;
+    padding: 1vh;
+    font-size: 4vw;
     border: 2px solid #ddd;
     border-radius: 8px;
     background-color: white;
@@ -48,13 +51,13 @@ select {
     align-items: center;
     perspective: 1000px;
     touch-action: pan-y pinch-zoom;
-    padding: 10px;
+    width: 100%;
+    padding: 0;
 }
 
 .flashcard {
     width: 100%;
-    max-width: 400px;
-    height: 300px;
+    height: 60vh;
     position: relative;
     transform-style: preserve-3d;
     transition: transform 0.6s;
@@ -80,7 +83,7 @@ select {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 20px;
+    padding: 2vh;
     background-color: white;
     border-radius: 16px;
 }
@@ -91,21 +94,24 @@ select {
 }
 
 .card-front p, .card-back p {
-    font-size: 24px;
-    line-height: 1.4;
+    font-size: 8vw;
+    line-height: 1.3;
     color: #1a1a1a;
+    width: 100%;
+    padding: 0 2vw;
 }
 
 .controls {
     display: flex;
     flex-direction: column;
-    gap: 16px;
-    padding: 16px 0;
+    gap: 1vh;
+    padding: 1vh 0;
+    width: 100%;
 }
 
 button {
-    padding: 12px 24px;
-    font-size: 16px;
+    padding: 2vh 4vw;
+    font-size: 4vw;
     border: none;
     border-radius: 8px;
     background-color: #007bff;
@@ -123,16 +129,18 @@ button:active {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 16px;
+    gap: 2vw;
+    width: 100%;
+    padding: 0 2vw;
 }
 
 .navigation button {
     flex: 1;
-    max-width: 60px;
+    max-width: 15vw;
 }
 
 #cardCounter {
-    font-size: 16px;
+    font-size: 4vw;
     color: #666;
 }
 
@@ -163,46 +171,42 @@ button:active {
 /* Portrait mode styles */
 @media screen and (orientation: portrait) {
     .flashcard {
-        width: 90%;
-        max-width: 500px;
-        height: 350px;
+        height: 65vh;
     }
 
     .card-front p, .card-back p {
-        font-size: 28px;
+        font-size: 10vw;
+    }
+
+    .controls {
+        padding: 1vh 2vw;
     }
 }
 
 /* Landscape mode styles */
 @media screen and (orientation: landscape) {
     .container {
-        padding: 10px;
-        gap: 10px;
+        gap: 0.5vh;
     }
 
     .flashcard {
-        width: 80%;
-        max-width: 800px;
-        height: 200px;
+        height: 70vh;
     }
 
     .card-front p, .card-back p {
-        font-size: 24px;
+        font-size: 6vw;
     }
 
     .controls {
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        gap: 20px;
-        padding: 10px 0;
+        gap: 2vw;
+        padding: 0.5vh 0;
     }
 
     .navigation {
         margin: 0;
-    }
-
-    #checkAnswer {
-        margin: 0;
+        width: auto;
     }
 } 
