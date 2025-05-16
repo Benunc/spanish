@@ -21,6 +21,8 @@ body {
     flex-direction: column;
     gap: 20px;
     height: 100vh;
+    max-height: 100vh;
+    overflow: hidden;
 }
 
 .category-selector {
@@ -46,6 +48,7 @@ select {
     align-items: center;
     perspective: 1000px;
     touch-action: pan-y pinch-zoom;
+    padding: 10px;
 }
 
 .flashcard {
@@ -155,4 +158,51 @@ button:active {
 /* Flip animation */
 .flipped .card-inner {
     transform: rotateY(180deg);
+}
+
+/* Portrait mode styles */
+@media screen and (orientation: portrait) {
+    .flashcard {
+        width: 90%;
+        max-width: 500px;
+        height: 350px;
+    }
+
+    .card-front p, .card-back p {
+        font-size: 28px;
+    }
+}
+
+/* Landscape mode styles */
+@media screen and (orientation: landscape) {
+    .container {
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .flashcard {
+        width: 80%;
+        max-width: 800px;
+        height: 200px;
+    }
+
+    .card-front p, .card-back p {
+        font-size: 24px;
+    }
+
+    .controls {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        padding: 10px 0;
+    }
+
+    .navigation {
+        margin: 0;
+    }
+
+    #checkAnswer {
+        margin: 0;
+    }
 } 
